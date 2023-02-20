@@ -77,7 +77,7 @@ playground.addEventListener('click', (e) => {
       if (x%2===0 && !e.target.style.background) {
          x++;
          turnBoxImg.src = 'images/icon-o-silver.svg'
-         e.target.style.background = "url('../images/icon-x.svg') center no-repeat, #1F3641";
+         e.target.style.background = "url('images/icon-x.svg') center no-repeat, #1F3641";
          playItems.forEach(item => {
             item.classList.remove('o');
             item.classList.add('x');
@@ -92,7 +92,7 @@ playground.addEventListener('click', (e) => {
       } else if (x%2===1 && !e.target.style.background) {
          x++;
          turnBoxImg.src = 'images/icon-x-silver.svg'
-         e.target.style.background = "url('../images/icon-o.svg') center no-repeat, #1F3641";
+         e.target.style.background = "url('images/icon-o.svg') center no-repeat, #1F3641";
          playItems.forEach(item => {
             item.classList.remove('x');
             item.classList.add('o');
@@ -110,9 +110,6 @@ playground.addEventListener('click', (e) => {
       if (playerO.length+playerX.length === 9  && count !== 3) {
          showTiedModal();
       }
-
-      console.log(playerX);
-
    }
 });
 
