@@ -1,0 +1,131 @@
+.modal {
+   display: none; 
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   align-items: center;
+   background: rgba(0, 0, 0, 0.3);
+}
+.finish {
+   display: none; 
+   width: 100%;
+   height: 266px;
+   background: #1F3641;
+   padding: 45px 0;
+   &__inner {
+      width: 491px;
+      margin: 0 auto;
+      text-align: center;
+   }
+   &__result {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #A8BFC9;
+   }
+   &__takes {
+      display: flex;
+      margin-top: 16px;
+      align-items: center;
+      justify-content: center;
+   }
+   &__img {
+      margin-right: 24px;
+   }
+   &__text {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+   }
+   &__buttons {
+      margin-top: 24px; 
+   }
+   &__quit {
+      width: 76px;
+      height: 52px;
+   }
+   &__next {
+      width: 146px;
+      height: 52px;
+   }
+   
+}
+.buttons {
+   display: flex;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 20px;
+   text-align: center;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: #1A2A33;
+   justify-content: center;
+}
+.btn-1 {
+   background: #A8BFC9;
+   box-shadow: inset 0px -4px 0px #6B8997;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 16px;
+   transition: .3s;
+   &:hover {
+      background: #DBE8ED;
+   }
+}
+.btn-2 {
+   background: #F2B137;
+   box-shadow: inset 0px -4px 0px #CC8B13;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: .3s;
+   &:hover {
+      background: #FFC860;
+   }
+}
+
+.restart {
+   display: none; 
+   width: 100%;
+   height: 266px;
+   background: #1F3641;
+   padding: 45px 0;
+   // .restart__inner
+   &__inner {
+      width: 491px;
+      margin: 0 auto;
+      text-align: center;
+   }
+   // .restart__title
+   &__title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #A8BFC9;
+      margin-bottom: 31px;
+   }
+   // .restart__buttons
+   &__buttons {}
+   // .restart__quit
+   &__no {
+      width: 139px;
+      height: 52px;
+   }
+   // .restart__next
+   &__yes {
+      width: 139px;
+      height: 52px;
+   }
+}
+

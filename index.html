@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>tic-tac-toe</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div class="container">
+      <div class="start">
+         <div class="start__icons">
+            <img src="images/icon-x.svg" alt="">
+            <img src="images/icon-o.svg" alt="">
+         </div>
+         <div class="start__pick">
+            <div class="start__title">PICK PLAYER 1’S MARK</div>
+            <div class="start__choice">
+               <!-- <input class="toggle__checkbox" type="checkbox">
+               <span class="toggle__switch"></span> -->
+               <div class="start__item item--x item--active"><img src="images/icon-x.svg" alt=""></div>
+               <div class="start__item item--o"><img src="images/icon-o.svg" alt=""></div>
+            </div>
+            <div class="start__text">REMEMBER : X GOES FIRST</div>
+         </div>
+         <div class="start__buttons">
+            <div class="start__btn cpu--btn">NEW GAME (VS CPU)</div>
+            <div class="start__btn player--btn">NEW GAME  (VS PLAYER)</div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="main">
+         <div class="main__top">
+            <div class="main__icons">
+               <img src="images/icon-x.svg" alt="">
+               <img src="images/icon-o.svg" alt="">
+            </div>
+            <div class="main__turn-box">
+               <img src="images/icon-x-silver.svg" alt="" class="main__img-turn">
+               <div class="main__text-turn">turn</div>
+            </div>
+            <div class="main__restart"></div>
+         </div>
+         <div class="main__play">
+            <div class="main__item item-1 o"></div>
+            <div class="main__item item-2 o"></div>
+            <div class="main__item item-3 o"></div>
+            <div class="main__item item-4 o"></div>
+            <div class="main__item item-5 o"></div>
+            <div class="main__item item-6 o"></div>
+            <div class="main__item item-7 o"></div>
+            <div class="main__item item-8 o"></div>
+            <div class="main__item item-9 o"></div>
+         </div>
+         <div class="main__bottom">
+            <div class="main__score main__x">
+               <div class="player-x">x (p2)</div>
+               <div class="main__x-score score-box">0</div>
+            </div>
+
+            <div class="main__score main__ties">
+               <div class="players-ties">ties</div>
+               <div class="ties-score score-box">0</div>
+            </div>
+
+            <div class="main__score main__o">
+               <div class="player-o">o (p1)</div>
+               <div class="main__o-score score-box">0</div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal">
+      <div class="finish">
+         <div class="finish__inner">
+            <div class="finish__result">you won</div>
+            <div class="finish__takes">
+               <img class="finish__img" src="images/icon-x.svg" alt="">
+               <div class="finish__text">takes the round</div>
+            </div>
+            <div class="finish__buttons buttons">
+               <div class="finish__quit btn-1">quit</div>
+               <div class="finish__next btn-2">next round</div>
+            </div>
+         </div>
+      </div>
+      <div class="restart">
+         <div class="restart__inner">
+            <div class="restart__title">Restart game?</div>
+            <div class="restart__buttons buttons">
+               <div class="restart__no btn-1">NO, CANCEL</div>
+               <div class="restart__yes btn-2">YES, RESTART</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- <div class="restart">
+      .restart__
+   </div> -->
+
+   <script src="js/script.js"></script>
+</body>
+</html>
