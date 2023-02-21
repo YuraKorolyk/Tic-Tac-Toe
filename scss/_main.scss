@@ -45,6 +45,23 @@
       color: #A8BFC9;
       margin-left: 13px;
    }
+   &__bnts {
+      display: flex;
+   }
+   &__back {
+      width: 52px;
+      height: 52px;
+      background: url('../images/cross.svg') center / 40px 40px no-repeat, #A8BFC9;
+      box-shadow: inset 0px -4px 0px #6B8997;
+      border-radius: 10px;
+      transition: .3s;
+      
+      cursor: pointer;
+      &:hover {
+         background:url('../images/cross.svg') center / 40px 40px no-repeat,#DBE8ED;
+      }
+   }
+   
    // .main__restart
    &__restart {
       width: 52px;
@@ -53,6 +70,7 @@
       box-shadow: inset 0px -4px 0px #6B8997;
       border-radius: 10px;
       transition: .3s;
+      margin-right: 20px;
       cursor: pointer;
       &:hover {
          background:url('../images/icon-restart.svg') center no-repeat,#DBE8ED;
@@ -129,5 +147,42 @@
 .x {
    &:hover {
       background: url('../images/icon-o-outline.svg') center no-repeat, #1F3641;
+   }
+}
+
+@media (max-width: 500px) {
+   .main {
+      &__play {
+         column-gap: 12.5px;
+         row-gap: 12.5px;
+      }
+      &__top {
+         width: 340px;
+      }
+      &__item {
+         width: 105px;
+         height: 105px;
+         background-size: 50px 50px;
+      }
+      &__turn-box {
+         width: 100px;
+         height: 40px;
+      }
+      &__restart {
+         width: 40px;
+         height: 40px;
+         margin-right: 10px;
+      }
+      &__back {
+         width: 40px;
+         height: 40px;
+      }
+      &__score {
+         width: 90px;
+         height: 60px;
+      }
+   }
+   .container {
+      max-width: 340px;
    }
 }
