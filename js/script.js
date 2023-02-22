@@ -241,7 +241,9 @@ document.querySelector('.back__yes').addEventListener('click', ()=>{
 });
 yesRestart.addEventListener('click', ()=> {
    clearGame();
-   cpuXLogic();
+   if (gameType === 'cpu') {
+      cpuXLogic();
+   }
 
 });
 noThanks.addEventListener('click', () => {
@@ -255,7 +257,9 @@ let scoreO = 0;
 
 nextBtn.addEventListener('click', ()=> {
    clearGame();
-   cpuXLogic();
+   if (gameType === 'cpu') {
+      cpuXLogic();
+   }
 });
 function cpuXLogic() {
    if (firstPlayer === 'O') {
