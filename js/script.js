@@ -236,8 +236,14 @@ document.querySelector('.back__no').addEventListener('click', ()=> {
    finishModal.style.display = 'none';
    finishModal.children[2].style.display = 'none'
 });
-document.querySelector('.back__yes').addEventListener('click', goMainScreen);
-yesRestart.addEventListener('click', clearGame);
+document.querySelector('.back__yes').addEventListener('click', ()=>{
+   goMainScreen();
+});
+yesRestart.addEventListener('click', ()=> {
+   clearGame();
+   cpuXLogic();
+
+});
 noThanks.addEventListener('click', () => {
    finishModal.style.display = 'none';
    finishModal.children[1].style.display = 'none'
@@ -249,7 +255,9 @@ let scoreO = 0;
 
 nextBtn.addEventListener('click', ()=> {
    clearGame();
-   
+   cpuXLogic();
+});
+function cpuXLogic() {
    if (firstPlayer === 'O') {
       playItems.forEach(item => {
          item.classList.remove('o');
@@ -263,8 +271,9 @@ nextBtn.addEventListener('click', ()=> {
          playerX.push(checkResult);
       } 
    }
-});
+}
 quitBtn.addEventListener('click', goMainScreen);
+
 function goMainScreen () {
    document.querySelector('.main').style.display='none';
    document.querySelector('.start').style.display='block';
@@ -283,6 +292,7 @@ function clearGame() {
    finishModal.style.display = 'none';
    finishModal.children[0].style.display = 'none';
    finishModal.children[1].style.display = 'none'
+   finishModal.children[2].style.display = 'none'
    playerX = [];
    playerO = [];
    x = 0;
@@ -308,7 +318,6 @@ function changeScore () {
 
 function showFinishModal (el) {
    finishImg.style.display = 'block';
-   // finishResult.style.display = 'block';
    finishText.innerHTML = 'takes the round'
    if (el%2===0) {
       finishImg.src ='images/icon-o.svg';
@@ -323,7 +332,6 @@ function showFinishModal (el) {
 
 function showTiedModal () {
    finishImg.style.display = 'none';
-   // finishResult.style.display = 'none';
    finishText.innerHTML = 'ROUND TIED'
    finishText.style.color = '#A8BFC9'
    finishModal.style.display = 'flex';
